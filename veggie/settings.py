@@ -39,6 +39,7 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'home',
+    'userextend',
 ]
 
 MIDDLEWARE = [
@@ -140,3 +141,9 @@ LOGOUT_REDIRECT_URL = '/login/'
 EMAIL_BACKEND = 'django.core.mail.backends.smtp.EmailBackend'
 
 # SMTP = Simple mail transfer protocol - un protocol folosit pentru trimiterea de mailuri
+
+EMAIL_HOST = 'mail.horiascurtu.ro'
+EMAIL_HOST_USER = 'ro28@horiascurtu.ro'
+EMAIL_HOST_PASSWORD = 'Django2022'
+EMAIL_PORT = 587
+EMAIL_USE_TLS = True  # TLS : Transport Layer Security - protocoale criptografice care va permit sa aveti comunicatii sigure

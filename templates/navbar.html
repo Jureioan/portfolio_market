@@ -17,9 +17,9 @@
                             Intro
                         </a>
                         <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
-                            <li><a class="dropdown-item" href="{% url 'all_books' %}">List of books</a></li>
-                            <li><a class="dropdown-item" href="{% url 'all_students' %}">List of students</a></li>
-                            <li><a class="dropdown-item" href="{% url 'list-of-books-emag' %}">List of books emag</a></li>
+{#                            <li><a class="dropdown-item" href="{% url 'all_books' %}">List of books</a></li>#}
+{#                            <li><a class="dropdown-item" href="{% url 'all_students' %}">List of students</a></li>#}
+{#                            <li><a class="dropdown-item" href="{% url 'list-of-books-emag' %}">List of books emag</a></li>#}
                         </ul>
                     </li>
                     <li class="nav-item dropdown">
@@ -28,13 +28,13 @@
                             Student
                         </a>
                         <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
-                            {% if perms.student.add_student %}
-                                <li><a class="dropdown-item" href="{% url 'create-student' %}">Create Student</a></li>
-                            {% endif %}
-                            {% if perms.student.view_student %}
-                                <li><a class="dropdown-item" href="{% url 'list-of-students' %}">List of students</a>
-                                </li>
-                            {% endif %}
+{#                            {% if perms.student.add_student %}#}
+{#                                <li><a class="dropdown-item" href="{% url 'create-student' %}">Create Student</a></li>#}
+{#                            {% endif %}#}
+{#                            {% if perms.student.view_student %}#}
+{#                                <li><a class="dropdown-item" href="{% url 'list-of-students' %}">List of students</a>#}
+{#                                </li>#}
+{#                            {% endif %}#}
                         </ul>
                     </li>
                     <li class="nav-item dropdown">
@@ -43,12 +43,12 @@
                             Trainer
                         </a>
                         <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
-                            {% if perms.trainer.add_trainer %}
-                                <li><a class="dropdown-item" href="{% url 'create-trainer' %}">Create Trainer</a></li>
-                            {% endif %}
-                            {% if perms.trainer.view_trainer %}
-                                <li><a class="dropdown-item" href="{% url 'list-trainer' %}">List of Trainers</a></li>
-                            {% endif %}
+{#                            {% if perms.trainer.add_trainer %}#}
+{#                                <li><a class="dropdown-item" href="{% url 'create-trainer' %}">Create Trainer</a></li>#}
+{#                            {% endif %}#}
+{#                            {% if perms.trainer.view_trainer %}#}
+{#                                <li><a class="dropdown-item" href="{% url 'list-trainer' %}">List of Trainers</a></li>#}
+{#                            {% endif %}#}
                         </ul>
                     </li>
 
@@ -58,12 +58,12 @@
                             Books
                         </a>
                         <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
-                            {% if perms.books.add_books %}
-                                <li><a class="dropdown-item" href="{% url 'create-book' %}">Create Book</a></li>
-                            {% endif %}
-                            {% if perms.books.view_books %}
-                                <li><a class="dropdown-item" href="{% url 'list-books' %}">List of Books</a></li>
-                            {% endif %}
+{#                            {% if perms.books.add_books %}#}
+{#                                <li><a class="dropdown-item" href="{% url 'create-book' %}">Create Book</a></li>#}
+{#                            {% endif %}#}
+{#                            {% if perms.books.view_books %}#}
+{#                                <li><a class="dropdown-item" href="{% url 'list-books' %}">List of Books</a></li>#}
+{#                            {% endif %}#}
                         </ul>
                     </li>
                     <li class="nav-item dropdown">
@@ -72,8 +72,8 @@
                             Courses
                         </a>
                         <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
-                            <li><a class="dropdown-item" href="{% url 'list-of-courses' %}">List of courses</a>
-                            </li>
+{#                            <li><a class="dropdown-item" href="{% url 'list-of-courses' %}">List of courses</a>#}
+{#                            </li>#}
                         </ul>
                     </li>
                     <li class="nav-item dropdown">
@@ -81,12 +81,12 @@
                            data-bs-toggle="dropdown" aria-expanded="false">
                             See Trainers
                         </a>
-                        <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
-                            {% for trainer in trainers %}
-                                <li><a class="dropdown-item"
-                                       href="{% url 'all_students_per_trainer' trainer.id %}">{{ trainer }}</a>
-                                </li>
-                            {% endfor %}
+{#                        <ul class="dropdown-menu" aria-labelledby="navbarDropdown">#}
+{#                            {% for trainer in trainers %}#}
+{#                                <li><a class="dropdown-item"#}
+{#                                       href="{% url 'all_students_per_trainer' trainer.id %}">{{ trainer }}</a>#}
+{#                                </li>#}
+{#                            {% endfor %}#}
                         </ul>
                     </li>
                 {% endif %}
@@ -107,7 +107,7 @@
                 </div>
             {% else %}
                 <a href="{% url 'login' %}" class="btn btn-outline-primary">Login</a>
-{#                <a href="{% url 'create-user' %}" class="btn btn-outline-light">Sign Up</a>#}
+                <a href="{% url 'create-user' %}" class="btn btn-outline-light">Sign Up</a>
             {% endif %}
         </div>
     </div>
