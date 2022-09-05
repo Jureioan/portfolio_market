@@ -5,15 +5,15 @@
     <meta charset="UTF-8">
     <title>{% block title %} {% endblock %}</title>
     <link href="{% static 'css/bootstrap.min.css' %}" rel="stylesheet">
-    <link rel="stylesheet" href="{% static 'css/my_style.css' %}">
+    <link rel="stylesheet" href="{% static 'css/my_styles.css' %}">
 </head>
 
 <body>
-
+<link rel="stylesheet" href="{% static 'css/my_styles.css' %}">
 
 {% include 'navbar.html' %}
 {% block content %}
-
+<link rel="stylesheet" href="{% static 'css/my_styles.css' %}">
 {% endblock %}
 <script src="{% static 'js/popper.min.js' %}" ></script>
 <script src="{% static 'js/bootstrap.min.js' %}" ></script>
